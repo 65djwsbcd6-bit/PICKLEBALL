@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
 import { PageId } from '../types/training';
-import { Menu, X, FolderGit2 } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: PageId;
   onNavigate: (page: PageId) => void;
-  onOpenAssetCatalog: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
   currentPage,
-  onNavigate,
-  onOpenAssetCatalog
+  onNavigate
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems: { id: PageId; label: string }[] = [
     { id: 'home', label: 'Home' },
     { id: 'athlete-biomechanics', label: 'Athlete & Biomechanics' },
-    { id: 'preparation', label: 'Prep Phase' },
-    { id: 'pre-competition', label: 'Pre-Comp Phase' },
-    { id: 'competition', label: 'Comp Phase' },
+    { id: 'preparation', label: 'Preparation Phase' },
+    { id: 'pre-competition', label: 'Pre-Competition Phase' },
+    { id: 'competition', label: 'Competition Phase' },
     { id: 'comparison', label: 'Progression' }
   ];
 
@@ -41,8 +39,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           Pickleball Performance
         </button>
 
-        {/* Zone 2: Single-line text navigation links */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold tracking-wide uppercase text-[#64748B]">
+        {/* Zone 2: Single-line text navigation links with completed phase names */}
+        <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold tracking-wide uppercase text-[#64748B]">
           {navItems.map((item) => {
             const isActive = currentPage === item.id;
             return (
@@ -64,23 +62,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Zone 3: 1 primary action */}
         <div className="hidden sm:flex items-center gap-3 shrink-0">
           <button
-            onClick={onOpenAssetCatalog}
-            className="px-3.5 py-1.5 text-xs font-semibold text-[#123B65] bg-[#EAF3FF] hover:bg-[#D5E7FF] border border-[#BFDBFE] rounded-lg transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer"
+            onClick={() => handleNavClick('preparation')}
+            className="px-4 py-2 text-xs font-semibold text-white bg-[#2563EB] hover:bg-[#1D4ED8] rounded-lg transition-colors whitespace-nowrap shrink-0 flex items-center gap-1.5 cursor-pointer shadow-2xs"
           >
-            <FolderGit2 className="w-3.5 h-3.5 text-[#2563EB]" />
-            <span>Asset Catalog</span>
+            <span>Start Training</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 
         {/* Mobile Hamburger Toggle */}
         <div className="flex lg:hidden items-center gap-2">
-          <button
-            onClick={onOpenAssetCatalog}
-            className="p-1.5 text-xs font-medium text-[#123B65] bg-[#EAF3FF] rounded-lg"
-            title="Asset Catalog"
-          >
-            <FolderGit2 className="w-4 h-4 text-[#2563EB]" />
-          </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-[#123B65] hover:bg-[#F4F8FD] rounded-lg transition-colors cursor-pointer"
@@ -109,13 +100,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           ))}
           <div className="pt-2">
             <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenAssetCatalog();
-              }}
-              className="w-full text-center px-4 py-2.5 text-xs font-semibold text-white bg-[#2563EB] rounded-lg shadow-xs"
+              onClick={() => handleNavClick('preparation')}
+              className="w-full text-center px-4 py-2.5 text-xs font-semibold text-white bg-[#2563EB] rounded-lg shadow-xs flex items-center justify-center gap-2"
             >
-              Open Media Asset Reference Catalog
+              <span>Start Training</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>

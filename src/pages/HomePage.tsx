@@ -19,7 +19,6 @@ import {
 
 interface HomePageProps {
   onNavigate: (page: PageId) => void;
-  onOpenAssetCatalog: () => void;
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {

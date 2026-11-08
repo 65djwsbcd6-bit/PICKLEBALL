@@ -3,11 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { PageId } from './types/training';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { AssetCatalogModal } from './components/AssetCatalogModal';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -19,7 +18,6 @@ import { ProgramComparisonPage } from './pages/ProgramComparisonPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
-  const [assetCatalogOpen, setAssetCatalogOpen] = useState(false);
 
   // Sync scroll on page change
   const handleNavigate = (page: PageId) => {
@@ -33,16 +31,12 @@ export default function App() {
       <Navbar
         currentPage={currentPage}
         onNavigate={handleNavigate}
-        onOpenAssetCatalog={() => setAssetCatalogOpen(true)}
       />
 
       {/* Main Page Content */}
       <main className="flex-1 w-full">
         {currentPage === 'home' && (
-          <HomePage
-            onNavigate={handleNavigate}
-            onOpenAssetCatalog={() => setAssetCatalogOpen(true)}
-          />
+          <HomePage onNavigate={handleNavigate} />
         )}
 
         {currentPage === 'athlete-biomechanics' && (
@@ -62,24 +56,12 @@ export default function App() {
         )}
 
         {currentPage === 'comparison' && (
-          <ProgramComparisonPage
-            onNavigate={handleNavigate}
-            onOpenAssetCatalog={() => setAssetCatalogOpen(true)}
-          />
+          <ProgramComparisonPage onNavigate={handleNavigate} />
         )}
       </main>
 
-      {/* Global Media Asset Reference Modal */}
-      <AssetCatalogModal
-        isOpen={assetCatalogOpen}
-        onClose={() => setAssetCatalogOpen(false)}
-      />
-
       {/* Footer */}
-      <Footer
-        onNavigate={handleNavigate}
-        onOpenAssetCatalog={() => setAssetCatalogOpen(true)}
-      />
+      <Footer onNavigate={handleNavigate} />
     </div>
   );
 }

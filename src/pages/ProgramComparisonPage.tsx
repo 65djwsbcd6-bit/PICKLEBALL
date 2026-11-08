@@ -12,18 +12,15 @@ import {
   Timer,
   Shield,
   Zap,
-  BarChart2,
-  FolderGit2
+  BarChart2
 } from 'lucide-react';
 
 interface ProgramComparisonPageProps {
   onNavigate: (page: PageId) => void;
-  onOpenAssetCatalog: () => void;
 }
 
 export const ProgramComparisonPage: React.FC<ProgramComparisonPageProps> = ({
-  onNavigate,
-  onOpenAssetCatalog
+  onNavigate
 }) => {
   const [selectedDimension, setSelectedDimension] = useState<'all' | 'volume' | 'intensity' | 'recovery'>('all');
 
@@ -331,18 +328,18 @@ export const ProgramComparisonPage: React.FC<ProgramComparisonPageProps> = ({
             </p>
           </div>
 
-          {/* Asset Reference Drawer Trigger */}
+          {/* Closing Navigation Action */}
           <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-            <div className="text-xs text-[#93C5FD]">
-              All 20+ image and video placeholder paths ready for asset upload.
+            <div className="text-xs text-[#BFDBFE]">
+              Explore the individual 7-day microcycle schedules and movement mechanics.
             </div>
 
             <button
-              onClick={onOpenAssetCatalog}
+              onClick={() => onNavigate('preparation')}
               className="px-5 py-2.5 text-xs font-bold text-[#123B65] bg-white hover:bg-[#EAF3FF] rounded-xl transition-colors flex items-center gap-2 cursor-pointer shadow-sm"
             >
-              <FolderGit2 className="w-4 h-4 text-[#2563EB]" />
-              <span>Inspect Media Asset Inventory</span>
+              <span>Explore Preparation Phase</span>
+              <ArrowRight className="w-4 h-4 text-[#2563EB]" />
             </button>
           </div>
         </section>

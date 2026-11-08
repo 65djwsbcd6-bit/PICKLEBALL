@@ -46,7 +46,7 @@ export const PreCompetitionPhasePage: React.FC<PreCompetitionPhasePageProps> = (
                 onClick={() => onNavigate('preparation')}
                 className="text-[#64748B] hover:text-[#123B65] transition-colors cursor-pointer"
               >
-                ← Back to Prep Phase
+                ← Back to Preparation Phase
               </button>
               <button
                 onClick={() => onNavigate('competition')}

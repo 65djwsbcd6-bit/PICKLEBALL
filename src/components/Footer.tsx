@@ -1,17 +1,13 @@
 import React from 'react';
 import { PageId } from '../types/training';
 import { ATHLETE_INFO, ACADEMIC_REFERENCES } from '../data/athleteData';
-import { ArrowUp, BookOpen, Shield, Award } from 'lucide-react';
+import { ArrowUp, BookOpen, Award } from 'lucide-react';
 
 interface FooterProps {
   onNavigate: (page: PageId) => void;
-  onOpenAssetCatalog: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({
-  onNavigate,
-  onOpenAssetCatalog
-}) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -43,7 +39,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
           </div>
 
-          {/* Col 2: Navigation Links */}
+          {/* Col 2: Navigation Links with full completed phase names */}
           <div className="space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Training Modules
@@ -70,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('preparation')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Phase 01: Preparation
+                  Phase 01: Preparation Phase
                 </button>
               </li>
               <li>
@@ -78,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('pre-competition')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Phase 02: Pre-Competition
+                  Phase 02: Pre-Competition Phase
                 </button>
               </li>
               <li>
@@ -86,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onNavigate('competition')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  Phase 03: Competition
+                  Phase 03: Competition Phase
                 </button>
               </li>
               <li>
@@ -114,12 +110,6 @@ export const Footer: React.FC<FooterProps> = ({
                 </div>
               ))}
             </div>
-            <button
-              onClick={onOpenAssetCatalog}
-              className="inline-flex items-center gap-1.5 text-xs text-[#93C5FD] hover:text-white font-medium underline mt-2 cursor-pointer"
-            >
-              Inspect Media Asset Directory
-            </button>
           </div>
         </div>
 
