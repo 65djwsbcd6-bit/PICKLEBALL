@@ -94,8 +94,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   // --- PHASE BANNERS ---
   {
     id: 'asset-phase-banner-1',
-    folder: '/images/phases/preparation/',
-    filename: '/images/phases/preparation/banner-preparation.jpg',
+    folder: 'public/images/phases/',
+    filename: '/images/phases/preparation-banner.jpg',
     type: 'image',
     aspectRatio: '21:9',
     recommendedResolution: '2560 × 1080 px',
@@ -104,8 +104,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'asset-phase-banner-2',
-    folder: '/images/phases/pre-competition/',
-    filename: '/images/phases/pre-competition/banner-pre-competition.jpg',
+    folder: 'public/images/phases/',
+    filename: '/images/phases/pre-competition-banner.jpg',
     type: 'image',
     aspectRatio: '21:9',
     recommendedResolution: '2560 × 1080 px',
@@ -114,8 +114,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'asset-phase-banner-3',
-    folder: '/images/phases/competition/',
-    filename: '/images/phases/competition/banner-competition.jpg',
+    folder: 'public/images/phases/',
+    filename: '/images/phases/competition-banner.jpg',
     type: 'image',
     aspectRatio: '21:9',
     recommendedResolution: '2560 × 1080 px',
@@ -126,8 +126,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   // --- MILESTONE 2 FOUNDATIONAL EXERCISE VIDEOS ---
   {
     id: 'video-m2-windmill',
-    folder: '/images/videos/',
-    filename: '/images/videos/bodyweight-rotational-windmill.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/bodyweight-rotational-windmill.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -136,8 +136,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-m2-lunge',
-    folder: '/images/videos/',
-    filename: '/images/videos/lateral-lunge-rotation.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/lateral-lunge-rotation.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -146,8 +146,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-m2-slams',
-    folder: '/images/videos/',
-    filename: '/images/videos/overhead-bodyweight-slams.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/overhead-bodyweight-slams.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -156,8 +156,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-m2-cobra',
-    folder: '/images/videos/',
-    filename: '/images/videos/prone-cobra-retraction.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/prone-cobra-retraction.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -166,8 +166,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-m2-shuttle',
-    folder: '/images/videos/',
-    filename: '/images/videos/low-crouch-shuttle-shuffle.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/low-crouch-shuttle-shuffle.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -176,8 +176,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-m2-squat-hold',
-    folder: '/images/videos/',
-    filename: '/images/videos/isometric-squat-hold.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/isometric-squat-hold.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -188,8 +188,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   // --- PRE-COMPETITION PROGRESSION EXERCISE VIDEOS ---
   {
     id: 'video-pc-windmill',
-    folder: '/images/videos/',
-    filename: '/images/videos/explosive-rotational-windmill.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/explosive-rotational-windmill.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -198,8 +198,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-pc-bound',
-    folder: '/images/videos/',
-    filename: '/images/videos/plyometric-lateral-bound-rotation.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/plyometric-lateral-bound-rotation.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -208,8 +208,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-pc-jump-slams',
-    folder: '/images/videos/',
-    filename: '/images/videos/dynamic-overhead-jump-slams.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/dynamic-overhead-jump-slams.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -218,8 +218,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-pc-cobra-flutter',
-    folder: '/images/videos/',
-    filename: '/images/videos/prone-cobra-tempo-flutter.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/prone-cobra-tempo-flutter.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -228,8 +228,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-pc-reactive-shuttle',
-    folder: '/images/videos/',
-    filename: '/images/videos/reactive-lateral-shuttle-cue.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/reactive-lateral-shuttle-cue.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -238,8 +238,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-pc-drop-squat',
-    folder: '/images/videos/',
-    filename: '/images/videos/drop-squat-reactive-bounce.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/drop-squat-reactive-bounce.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -250,8 +250,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   // --- COMPETITION MAINTENANCE EXERCISE VIDEOS ---
   {
     id: 'video-comp-drives',
-    folder: '/images/videos/',
-    filename: '/images/videos/competition-rotational-shadow-drives.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/competition-rotational-shadow-drives.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -260,8 +260,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-comp-timing',
-    folder: '/images/videos/',
-    filename: '/images/videos/competition-trophy-timing.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/competition-trophy-timing.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -270,8 +270,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-comp-rotator',
-    folder: '/images/videos/',
-    filename: '/images/videos/competition-rotator-activation.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/competition-rotator-activation.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -280,8 +280,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-comp-split-step',
-    folder: '/images/videos/',
-    filename: '/images/videos/competition-split-step-priming.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/competition-split-step-priming.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',
@@ -290,8 +290,8 @@ export const ASSET_INVENTORY: AssetRecord[] = [
   },
   {
     id: 'video-comp-kitchen-hold',
-    folder: '/images/videos/',
-    filename: '/images/videos/competition-kitchen-stance-hold.mp4',
+    folder: '/videos/exercises/',
+    filename: '/videos/exercises/competition-kitchen-stance-hold.mp4',
     type: 'video',
     aspectRatio: '16:9',
     recommendedResolution: '1920 × 1080 @ 60fps',

@@ -21,7 +21,7 @@ This project translates previous academic research into three periodized microcy
 ## 2. Technical Stack & Deployment
 - **Framework:** React 19, Vite, Tailwind CSS v4, TypeScript, Lucide Icons.
 - **Color Scheme:** Deep Navy (`#123B65`), Primary Blue (`#2563EB`), Light Blue (`#EAF3FF`), Pale Blue (`#F4F8FD`), White (`#FFFFFF`).
-- **Media Placeholders:** Resilient placeholders with copy path utility and live test preview capabilities across all 20+ required image/video slots.
+- **Media Assets:** Clear static asset placeholders with standard HTML <img> and <video> tags pointing directly to public/images/<section>/<filename> and public/videos/<section>/<filename> with exact GitHub upload paths displayed in <code> tags.
 - **Deployment Compatibility:**
   - Automated GitHub Actions workflow (`.github/workflows/deploy.yml`) for GitHub Pages.
   - `.npmrc` (`legacy-peer-deps=true`) and clean dependency resolution for Vercel.

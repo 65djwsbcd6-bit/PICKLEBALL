@@ -29,7 +29,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/explosive-rotational-windmill.mp4',
+      filename: '/videos/exercises/explosive-rotational-windmill.mp4',
       aspectRatio: '16:9',
       description: 'Progressed drill showing rapid hip-torso uncoiling, high-velocity arm sweep, and aggressive trail-foot pivot simulating match-speed forehands.'
     },
@@ -61,7 +61,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/plyometric-lateral-bound-rotation.mp4',
+      filename: '/videos/exercises/plyometric-lateral-bound-rotation.mp4',
       aspectRatio: '16:9',
       description: 'Explosive lateral bound off left leg, landing and sticking on right single leg into deep rotational reach, followed by explosive pushback.'
     },
@@ -93,7 +93,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/dynamic-overhead-jump-slams.mp4',
+      filename: '/videos/exercises/dynamic-overhead-jump-slams.mp4',
       aspectRatio: '16:9',
       description: 'Full vertical jump off two feet into trophy position pre-stretch, explosive overhead arm snap at apex, and soft landing on balls of feet.'
     },
@@ -125,7 +125,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/prone-cobra-tempo-flutter.mp4',
+      filename: '/videos/exercises/prone-cobra-tempo-flutter.mp4',
       aspectRatio: '16:9',
       description: 'Prone position with chest elevated, thumbs to ceiling, performing rhythmic 10-second pulses/flutters at peak scapular retraction.'
     },
@@ -157,7 +157,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/reactive-lateral-shuttle-cue.mp4',
+      filename: '/videos/exercises/reactive-lateral-shuttle-cue.mp4',
       aspectRatio: '16:9',
       description: 'Athlete in low Kitchen stance reacting to quick visual or audio directional signals, dropping into split-step and accelerating laterally.'
     },
@@ -189,7 +189,7 @@ export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/drop-squat-reactive-bounce.mp4',
+      filename: '/videos/exercises/drop-squat-reactive-bounce.mp4',
       aspectRatio: '16:9',
       description: 'Quick drop from standing into a 70-degree squat catch, 4-second hold, followed by an immediate reactive split-step hop and reset.'
     },
@@ -225,7 +225,7 @@ export const COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/competition-rotational-shadow-drives.mp4',
+      filename: '/videos/exercises/competition-rotational-shadow-drives.mp4',
       aspectRatio: '16:9',
       description: 'Crisp, low-volume forehand shadow swings focusing on pure kinetic chain timing, perfect balance, and zero residual fatigue.'
     },
@@ -257,7 +257,7 @@ export const COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/competition-trophy-timing.mp4',
+      filename: '/videos/exercises/competition-trophy-timing.mp4',
       aspectRatio: '16:9',
       description: 'Submaximal jump to trophy position, clean rhythmic overhead swing through contact plane, soft balanced landing.'
     },
@@ -289,7 +289,7 @@ export const COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/competition-rotator-activation.mp4',
+      filename: '/videos/exercises/competition-rotator-activation.mp4',
       aspectRatio: '16:9',
       description: 'Standing or light prone band activation with micro-contractions to warm and protect the infraspinatus and teres minor.'
     },
@@ -321,7 +321,7 @@ export const COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/competition-split-step-priming.mp4',
+      filename: '/videos/exercises/competition-split-step-priming.mp4',
       aspectRatio: '16:9',
       description: 'Quick 15-second intervals of light rhythmic split-steps with instantaneous 2-step lateral bursts and instant recovery.'
     },
@@ -353,7 +353,7 @@ export const COMPETITION_EXERCISES: ExerciseItem[] = [
     isMilestoneOriginal: false,
     mediaPlaceholder: {
       type: 'video',
-      filename: '/images/videos/competition-kitchen-stance-hold.mp4',
+      filename: '/videos/exercises/competition-kitchen-stance-hold.mp4',
       aspectRatio: '16:9',
       description: 'Short 4-second low-crouch hold with paddle in ready position, simulating dink battle positioning without lactic accumulation.'
     },
@@ -385,7 +385,7 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
   title: 'Preparation Phase',
   headline: 'BUILD THE FOUNDATION.',
   bannerPlaceholder: {
-    filename: '/images/phases/preparation/banner-preparation.jpg',
+    filename: '/images/phases/preparation-banner.jpg',
     description: 'Athlete in court gear performing foundational stability work with paddle, morning sunlight, clean sports editorial aesthetic.'
   },
   mainFunction:
@@ -615,7 +615,7 @@ export const PRE_COMPETITION_PHASE_DATA: MicrocyclePhase = {
   title: 'Pre-Competition Phase',
   headline: 'TURN STRENGTH INTO POWER.',
   bannerPlaceholder: {
-    filename: '/images/phases/pre-competition/banner-pre-competition.jpg',
+    filename: '/images/phases/pre-competition-banner.jpg',
     description: 'Dynamic athletic performance shot of player exploding into overhead smash with airborne vertical jump and high paddle speed.'
   },
   mainFunction:
@@ -844,7 +844,7 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
   title: 'Competition Phase',
   headline: 'PERFORM WHEN IT MATTERS.',
   bannerPlaceholder: {
-    filename: '/images/phases/competition/banner-competition.jpg',
+    filename: '/images/phases/competition-banner.jpg',
     description: 'Crisp court view showing intense kitchen dink exchange during tournament play, focused athletic gaze, clean blue court surface.'
   },
   mainFunction:
