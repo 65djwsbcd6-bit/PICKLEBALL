@@ -5,7 +5,7 @@ interface MediaPlaceholderProps {
   type: 'image' | 'video';
   filename: string;
   description: string;
-  aspectRatio?: '16:9' | '21:9' | '4:3' | '3:2' | '1:1';
+  aspectRatio?: '16:9' | '21:9' | '4:3' | '3:2' | '1:1' | '9:16';
   className?: string;
   originalLink?: string;
 }
@@ -14,7 +14,7 @@ export const MediaPlaceholder: React.FC<MediaPlaceholderProps> = ({
   type,
   filename,
   description,
-  aspectRatio = '16:9',
+  aspectRatio = '9:16',
   className = '',
   originalLink
 }) => {
@@ -29,6 +29,8 @@ export const MediaPlaceholder: React.FC<MediaPlaceholderProps> = ({
 
   const getAspectClass = () => {
     switch (aspectRatio) {
+      case '9:16':
+        return 'aspect-[9/16] w-full max-w-[280px] sm:max-w-[320px] mx-auto shadow-sm';
       case '21:9':
         return 'aspect-[21/9]';
       case '4:3':

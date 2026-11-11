@@ -310,12 +310,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Bodyweight Rotational Windmill Drive',
     originalName: 'Bodyweight Rotational Windmill Drive',
     movementTarget: 'Forehand Drive',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/bodyweight-rotational-windmill.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Demonstration of athletic ready stance, pivot off back foot, and low-to-high dynamic arm sweep simulating forehand kinetic chain.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/utEsGAg6UJU'
     },
@@ -342,12 +342,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Bodyweight Lateral Lunge with Rotational Reach',
     originalName: 'Bodyweight Lateral Lunge with Rotational Reach',
     movementTarget: 'Forehand Drive',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/lateral-lunge-rotation.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Execution of wide lateral step, deep hip load on trail leg, cross-torso rotational reach, and explosive heel push-off to center.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/VaJOo2Kb1OU'
     },
@@ -374,12 +374,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Plyometric Overhead Bodyweight Slams',
     originalName: 'Plyometric Overhead Bodyweight Slams',
     movementTarget: 'The Overhead Smash',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/overhead-bodyweight-slams.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Staggered stance with full overhead pre-stretch, vertical hop, and explosive downward trunk flexion with arm slam.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/v911k2pRgzc'
     },
@@ -406,12 +406,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Prone Cobra Shoulder Retractions',
     originalName: 'Prone Cobra Shoulder Retractions',
     movementTarget: 'The Overhead Smash',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/prone-cobra-retraction.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Prone floor positioning, scapular retraction, external shoulder rotation thumbs-to-ceiling, and 3-second isometric hold.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/v911k2pRgzc'
     },
@@ -438,12 +438,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Low-Crouch Lateral Shuttle Shuffle',
     originalName: 'Low-Crouch Lateral Shuttle Shuffle',
     movementTarget: 'Dink Shot & Split Step',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/low-crouch-shuttle-shuffle.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Half-squat Kitchen stance, rapid 3-step lateral shuffle without crossover, balance pause with shadow dink stroke.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/nqLsCj7pgbw'
     },
@@ -470,12 +470,12 @@ export const MILESTONE_2_EXERCISES: ExerciseItem[] = [
     name: 'Isometric Squat Hold',
     originalName: 'Isometric Squat Hold',
     movementTarget: 'Dink Shot & Split Step',
-    phase: 'preparation',
+    phase: 'pre-competition',
     isMilestoneOriginal: true,
     mediaPlaceholder: {
       type: 'video',
       filename: '/videos/exercises/isometric-squat-hold.mp4',
-      aspectRatio: '16:9',
+      aspectRatio: '9:16',
       description: 'Lowering to 60-90 degree knee bend simulating Kitchen ready stance, 5-second isometric hold, reset and repeat for cycles.',
       originalMilestoneLink: 'https://www.youtube.com/shorts/X5RfG8u8oQU'
     },

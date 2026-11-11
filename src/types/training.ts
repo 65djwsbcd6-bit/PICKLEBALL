@@ -15,7 +15,9 @@ export type PageId =
 export type PickleballMovement =
   | 'Forehand Drive'
   | 'The Overhead Smash'
-  | 'Dink Shot & Split Step';
+  | 'Dink Shot & Split Step'
+  | 'Foundational Strength'
+  | 'Foundational Conditioning';
 
 export interface ExerciseItem {
   id: string;

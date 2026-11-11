@@ -175,7 +175,7 @@ export const WorkoutDetailModal: React.FC<WorkoutDetailModalProps> = ({
                         type={ex.mediaPlaceholder.type}
                         filename={ex.mediaPlaceholder.filename}
                         description={ex.mediaPlaceholder.description}
-                        aspectRatio="16:9"
+                        aspectRatio={(ex.mediaPlaceholder.aspectRatio as any) || '9:16'}
                         originalLink={ex.mediaPlaceholder.originalMilestoneLink}
                       />
                     </div>

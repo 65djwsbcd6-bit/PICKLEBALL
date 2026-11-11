@@ -9,371 +9,245 @@
 import { MicrocyclePhase, ExerciseItem } from '../types/training';
 import { MILESTONE_2_EXERCISES } from './athleteData';
 
-// --- PHASE 01: PREPARATION EXERCISES (Foundational Volume & Mechanics) ---
+// --- PHASE 01: PREPARATION EXERCISES (4 Core Foundational Exercises - Static Images Only, 9:16 Portrait) ---
 export const PREPARATION_EXERCISES: ExerciseItem[] = [
-  ...MILESTONE_2_EXERCISES.map((ex) => ({
-    ...ex,
-    phase: 'preparation' as const,
-    progressionNote: 'Phase 01 baseline: High focus on movement quality, higher volume (12–15 reps / 35–45s), moderate intensity (60–70% HRmax) to build tissue tolerance and motor sequencing.'
-  }))
-];
-
-// --- PHASE 02: PRE-COMPETITION EXERCISES (Power, Velocity & Reactive Agility) ---
-export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
   {
-    id: 'pc-rotational-windmill-elastic',
-    name: 'Explosive Rotational Windmill Drive with Dynamic Pivot',
-    originalName: 'Bodyweight Rotational Windmill Drive',
-    movementTarget: 'Forehand Drive',
-    phase: 'pre-competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/explosive-rotational-windmill.mp4',
-      aspectRatio: '16:9',
-      description: 'Progressed drill showing rapid hip-torso uncoiling, high-velocity arm sweep, and aggressive trail-foot pivot simulating match-speed forehands.'
-    },
-    movementDescription:
-      'High-velocity progression of the windmill drive designed to convert foundational rotational mobility into explosive kinetic chain power at game tempo.',
-    stepByStepInstructions: [
-      'Assume a dynamic, slightly lowered athletic ready stance with active ball-of-foot engagement.',
-      'Initiate an aggressive back-foot drive and hip uncoiling, whipping arms low-to-high with maximal concentric speed.',
-      'Emphasize a rapid whip of the torso while maintaining a rigid core at the simulated point of impact.',
-      'Perform 8–10 explosive reps per side at near-maximal effort, allowing 45 seconds of recovery between sides.'
-    ],
-    equipmentNeeded: 'None (Bodyweight / Court footwear)',
-    primaryMuscles: ['Internal & External Obliques', 'Rectus Abdominis', 'Gluteus Medius', 'Anterior Deltoids'],
-    secondaryMuscles: ['Transverse Abdominis', 'Lead Quadriceps', 'Pectoralis Major'],
-    setsAndReps: '3–4 sets × 8–10 explosive reps per side',
-    trainingIntensity: 'High / Power-velocity focus (RPE 8/10, 75–80% HRmax)',
-    restInterval: '60–75 seconds between sets',
-    trainingBenefits: 'Dramatically increases angular velocity of the paddle and explosive transverse-plane rotational power for offensive drives.',
-    biomechanicalRationale:
-      'Maximizes the rate of force development (RFD) across the pelvic-lumbar-thoracic kinetic chain, decreasing ground-to-paddle energy dissipation.',
-    progressionNote: 'Progressed from 12–15 moderate reps to 8–10 maximal acceleration reps with shortened contact transition.'
-  },
-  {
-    id: 'pc-lateral-bound-rotation',
-    name: 'Plyometric Lateral Bound with Deceleration Stick & Rotational Reach',
-    originalName: 'Bodyweight Lateral Lunge with Rotational Reach',
-    movementTarget: 'Forehand Drive',
-    phase: 'pre-competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/plyometric-lateral-bound-rotation.mp4',
-      aspectRatio: '16:9',
-      description: 'Explosive lateral bound off left leg, landing and sticking on right single leg into deep rotational reach, followed by explosive pushback.'
-    },
-    movementDescription:
-      'Plyometric progression replacing the static lateral step with a dynamic lateral bound, absorbing 2.5× bodyweight ground reaction force before torso loading.',
-    stepByStepInstructions: [
-      'Begin on one leg in a loaded athletic hinge.',
-      'Explosively bound laterally across 4–5 feet, landing softly onto the outside leg while absorbing force through the hip and knee.',
-      'Instantly execute a low rotational reach across the lunging knee, simulating an extreme wide forehand retrieval.',
-      'Pause for a crisp 1-second "stick" in dynamic balance, then bound explosively back to starting position; repeat 6–8 bounds per side.'
-    ],
-    equipmentNeeded: 'None (Court space)',
-    primaryMuscles: ['Gluteus Medius & Maximus', 'Quadriceps', 'Hip Adductors', 'Contralateral Obliques'],
-    secondaryMuscles: ['Hamstrings', 'Ankle Stabilizers / Peroneals'],
-    setsAndReps: '3 sets × 6–8 bounds per side',
-    trainingIntensity: 'High (RPE 8/10)',
-    restInterval: '75 seconds between sets',
-    trainingBenefits: 'Develops supreme frontal-plane eccentric deceleration and single-leg stability for retrieving deep wide corner shots.',
-    biomechanicalRationale:
-      'Trains the stretch-shortening cycle in the abductor-adductor complex and enhances neuromuscular control to prevent knee valgus and ankle rollover.',
-    progressionNote: 'Progressed from stationary lateral lunge to high-impulse lateral plyometric bound with eccentric deceleration stick.'
-  },
-  {
-    id: 'pc-overhead-jump-slams',
-    name: 'Dynamic Plyometric Overhead Jump Slams',
-    originalName: 'Plyometric Overhead Bodyweight Slams',
-    movementTarget: 'The Overhead Smash',
-    phase: 'pre-competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/dynamic-overhead-jump-slams.mp4',
-      aspectRatio: '16:9',
-      description: 'Full vertical jump off two feet into trophy position pre-stretch, explosive overhead arm snap at apex, and soft landing on balls of feet.'
-    },
-    movementDescription:
-      'Sport-specific jumping smash progression integrating vertical ground impulse, aerial trunk coiling, and maximal downward whip.',
-    stepByStepInstructions: [
-      'Begin in a loaded semi-squat; aggressively swing arms back and jump vertically with maximal upward impulse.',
-      'At peak jump height, cock dominant arm into the full trophy position with chest open in thoracic extension.',
-      'Snap arms and torso downward with maximal velocity past hips as feet begin descent.',
-      'Land softly on the balls of both feet, absorbing impact through knees and hips, and immediately reset into ready stance; 6–8 reps per set.'
-    ],
-    equipmentNeeded: 'None (High ceiling / Outdoor court)',
-    primaryMuscles: ['Latissimus Dorsi', 'Pectoralis Major', 'Rectus Abdominis', 'Triceps Brachii', 'Calves'],
-    secondaryMuscles: ['Rotator cuff', 'Deltoids', 'Quadriceps'],
-    setsAndReps: '3–4 sets × 6–8 maximal jump reps',
-    trainingIntensity: 'Very High / Peak Power (RPE 8.5/10, ATP-PCr dominance)',
-    restInterval: '90 seconds between sets (full ATP resynthesis)',
-    trainingBenefits: 'Maximizes vertical launch power, airborne timing, and high-velocity downward stroke power for match-winning smashes.',
-    biomechanicalRationale:
-      'Optimizes vertical ground reaction impulse (GRF) and pairs it with explosive abdominal crunch mechanics to maximize overhead strike velocity.',
-    progressionNote: 'Progressed from ground-based staggered hops to maximal vertical jump smashes with complete arm-speed acceleration.'
-  },
-  {
-    id: 'pc-prone-cobra-flutter',
-    name: 'Prone Cobra Shoulder Retractions with Tempo Flutter',
-    originalName: 'Prone Cobra Shoulder Retractions',
-    movementTarget: 'The Overhead Smash',
-    phase: 'pre-competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/prone-cobra-tempo-flutter.mp4',
-      aspectRatio: '16:9',
-      description: 'Prone position with chest elevated, thumbs to ceiling, performing rhythmic 10-second pulses/flutters at peak scapular retraction.'
-    },
-    movementDescription:
-      'Dynamic endurance progression of the prone cobra adding rapid micro-contractions to train the posterior cuff under neuromuscular fatigue.',
-    stepByStepInstructions: [
-      'Lie face down on mat, legs extended, glutes lightly engaged.',
-      'Retract scapulae and elevate chest, rotating thumbs externally toward ceiling.',
-      'Hold the peak retraction while executing 10 seconds of rhythmic, controlled 2-inch pulses/flutters.',
-      'Lower for 2 seconds and repeat for 6–8 continuous cycles per set.'
-    ],
-    equipmentNeeded: 'Exercise mat',
-    primaryMuscles: ['Infraspinatus', 'Teres Minor', 'Rhomboids', 'Middle & Lower Trapezius'],
-    secondaryMuscles: ['Erector Spinae', 'Posterior Deltoids'],
-    setsAndReps: '3 sets × 6–8 cycles (each cycle: 10s flutter + 2s reset)',
-    trainingIntensity: 'Moderate-High muscular burn (RPE 7.5/10)',
-    restInterval: '60 seconds between sets',
-    trainingBenefits: 'Builds robust endurance in external rotators to maintain humeral head stability across 3-set competitive matches.',
-    biomechanicalRationale:
-      'Enhances co-contraction of the glenohumeral stabilizers during repetitive deceleration of high-speed overhead swings.',
-    progressionNote: 'Progressed from static 3-second holds to prolonged rhythmic tempo flutter endurance under muscular tension.'
-  },
-  {
-    id: 'pc-reactive-shuttle-cue',
-    name: 'Reactive Lateral Shuttle Shuffle with Directional Split-Step Cue',
-    originalName: 'Low-Crouch Lateral Shuttle Shuffle',
+    id: 'p1-bodyweight-squat',
+    name: 'Bodyweight Squat',
     movementTarget: 'Dink Shot & Split Step',
-    phase: 'pre-competition',
+    phase: 'preparation',
     isMilestoneOriginal: false,
     mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/reactive-lateral-shuttle-cue.mp4',
-      aspectRatio: '16:9',
-      description: 'Athlete in low Kitchen stance reacting to quick visual or audio directional signals, dropping into split-step and accelerating laterally.'
+      type: 'image',
+      filename: '/images/exercises/bodyweight-squat.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) image of proper squat mechanics, parallel thigh depth, upright torso, and neutral spine.'
     },
     movementDescription:
-      'Sport-specific cognitive-motor agility progression requiring rapid split-step synchronization and explosive direction changes under <0.4s reaction demands.',
+      'Foundational closed-chain bilateral lower-body movement establishing quadriceps, gluteal, and hip endurance necessary for sustained Kitchen-line crouch postures and split-step force absorption.',
     stepByStepInstructions: [
-      'Establish a low-crouch ready position at the center mark (Kitchen line simulation).',
-      'On external cue (or visual indicator), immediately perform a low-amplitude split-step hop landing wide.',
-      'Instantly drive off the plant foot and shuffle 4 steps in the cued direction (left or right) keeping hips level.',
-      'Execute a shadow dink push with zero wrist wobble, brake hard, and shuffle back to center; continue for 40 seconds.'
+      'Stand upright with feet positioned shoulder-width apart and toes angled slightly outward (5°–10°).',
+      'Brace core firmly and initiate the descent by hinging simultaneously at the hips and knees.',
+      'Lower under control until thighs are parallel to the floor (approx. 90° knee flexion), keeping chest proud and heels planted.',
+      'Drive forcefully through the midfoot and heels to return to standing; complete 12–15 controlled reps.'
     ],
-    equipmentNeeded: 'Court markers / Audio or visual cue app / Partner',
-    primaryMuscles: ['Quadriceps', 'Gluteus Medius', 'Soleus', 'Gastrocnemius', 'Hip Abductors'],
-    secondaryMuscles: ['Peroneals', 'Deep core rotators'],
-    setsAndReps: '4 sets × 40 seconds continuous work',
-    trainingIntensity: 'High Agility / Anaerobic Lactic (RPE 8/10, 70–80% HRmax)',
-    restInterval: '60 seconds between sets',
-    trainingBenefits: 'Sharpen reactive court agility, reduces cognitive reaction lag, and trains the quadriceps to resist burning under fast Kitchen battles.',
+    equipmentNeeded: 'None (Bodyweight / Exercise Mat)',
+    primaryMuscles: ['Quadriceps (Vastus Medialis, Vastus Lateralis, Rectus Femoris)', 'Gluteus Maximus', 'Hamstrings'],
+    secondaryMuscles: ['Core Stabilizers', 'Gastrocnemius & Soleus', 'Erector Spinae'],
+    setsAndReps: '3–4 sets × 12–15 reps',
+    trainingIntensity: 'Moderate (RPE 6/10, 60–70% HRmax)',
+    restInterval: '45–60 seconds between sets',
+    trainingBenefits:
+      'Builds muscular endurance in knee extensors and hip stabilizers to maintain low-crouch dink stances without premature thigh burning.',
     biomechanicalRationale:
-      'Conditions the plantarflexors and gluteal medius for rapid lateral ground reaction force generation while maintaining center of gravity stability.',
-    progressionNote: 'Progressed from fixed-pattern linear shuffling to open-loop reactive split-step changes of direction.'
+      'Develops bilateral ground reaction force distribution and enhances eccentric-to-isometric control required for split-step deceleration.',
+    progressionNote: 'Phase 01 Foundational Image: Emphasizes movement mechanics, depth control, and knee stability before high-speed lateral agility.'
   },
   {
-    id: 'pc-drop-squat-bounce',
-    name: 'Dynamic-to-Isometric Drop Squat Hold with Reactive Split-Step Bounce',
-    originalName: 'Isometric Squat Hold',
-    movementTarget: 'Dink Shot & Split Step',
-    phase: 'pre-competition',
+    id: 'p1-forearm-plank',
+    name: 'Forearm Plank',
+    movementTarget: 'Forehand Drive',
+    phase: 'preparation',
     isMilestoneOriginal: false,
     mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/drop-squat-reactive-bounce.mp4',
-      aspectRatio: '16:9',
-      description: 'Quick drop from standing into a 70-degree squat catch, 4-second hold, followed by an immediate reactive split-step hop and reset.'
+      type: 'image',
+      filename: '/images/exercises/forearm-plank.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) image showing straight-line head-to-heel alignment, active core bracing, elbows under shoulders, and neutral pelvis.'
     },
     movementDescription:
-      'Combines rapid eccentric drop-absorption with static isometric strength and an explosive reactive rebound, mimicking net defense.',
+      'Isometric anti-extension core stabilization drill that strengthens the pelvic-lumbar cylinder, preventing energy leakage during rotational kinetic chain groundstrokes.',
     stepByStepInstructions: [
-      'Stand upright on toes; suddenly drop hips into a 70° knee flexion squat, catching momentum instantly.',
-      'Lock into a rock-solid isometric crouch for 4 seconds without any knee drift.',
-      'On count 4, immediately explode into a light, reactive split-step hop, landing light on the balls of the feet.',
-      'Repeat consecutively for 8 continuous reps per set.'
+      'Place forearms on an exercise mat with elbows positioned directly beneath the shoulder joints.',
+      'Extend legs back with balls of feet on the floor, lifting hips so body forms a straight line from ears to ankles.',
+      'Draw navel inward to activate the transverse abdominis, squeeze glutes, and avoid sagging or piking hips.',
+      'Maintain steady diaphragmatic breathing and hold rigidly for 35–45 seconds per set.'
     ],
-    equipmentNeeded: 'None (Bodyweight)',
-    primaryMuscles: ['Quadriceps', 'Gluteus Complex', 'Calf Complex (Soleus/Gastroc)', 'Core Stabilizers'],
-    secondaryMuscles: ['Tibialis Anterior', 'Hip Rotators'],
-    setsAndReps: '3–4 sets × 8 reps (4s isometric catch + reactive bounce)',
-    trainingIntensity: 'Moderate-High (RPE 7.5/10)',
-    restInterval: '60 seconds between sets',
-    trainingBenefits: 'Trains fast-twitch rate of force development and reactive stiffness needed to absorb opponent body-shots at the Kitchen.',
+    equipmentNeeded: 'Exercise Mat',
+    primaryMuscles: ['Rectus Abdominis', 'Transverse Abdominis', 'Internal & External Obliques'],
+    secondaryMuscles: ['Serratus Anterior', 'Gluteus Complex', 'Quadriceps'],
+    setsAndReps: '3 sets × 35–45 seconds isometric hold',
+    trainingIntensity: 'Moderate (RPE 6–7/10)',
+    restInterval: '45 seconds between sets',
+    trainingBenefits:
+      'Prevents lumbar hyperextension and strengthens the core cylinder to effectively transfer ground reaction forces into upper-body paddle swings.',
     biomechanicalRationale:
-      'Improves tendon stiffness and pre-activation of the quadriceps and plantarflexors before foot strike, shortening reactive ground contact times.',
-    progressionNote: 'Progressed from passive isometric holds to high-speed drop deceleration and immediate reactive split-step recoil.'
+      'Solidifies pelvic-lumbar stability so that rotational torque from the lower extremities translates into paddle velocity without spine strain.',
+    progressionNote: 'Phase 01 Foundational Image: Establishes isometric anti-extension core endurance before explosive rotational whip drills.'
+  },
+  {
+    id: 'p1-walking-lunges',
+    name: 'Walking Lunges',
+    movementTarget: 'Forehand Drive',
+    phase: 'preparation',
+    isMilestoneOriginal: false,
+    mediaPlaceholder: {
+      type: 'image',
+      filename: '/images/exercises/walking-lunges.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) view of forward walking lunge step, front knee aligned at 90 degrees, back knee hovering above court surface.'
+    },
+    movementDescription:
+      'Dynamic unilateral lower-body conditioning exercise developing single-leg braking capacity, hip stability, and deceleration control for aggressive baseline transitions.',
+    stepByStepInstructions: [
+      'Stand tall with feet hip-width apart and hands resting on hips or in athletic ready position.',
+      'Step forward with right foot, lowering hips until right thigh is parallel to the ground and left knee hovers 1–2 inches off the floor.',
+      'Ensure the front knee stays aligned over the midfoot without collapsing inward (valgus collapse).',
+      'Push smoothly off the front heel, stepping the rear foot forward directly into the next lunge; alternate for 10–12 reps per leg.'
+    ],
+    equipmentNeeded: 'None (Bodyweight / 15-foot court space)',
+    primaryMuscles: ['Quadriceps', 'Gluteus Maximus & Medius', 'Hamstrings'],
+    secondaryMuscles: ['Adductors', 'Soleus & Gastrocnemius', 'Core Obliques'],
+    setsAndReps: '3 sets × 10–12 reps per leg (20–24 steps total)',
+    trainingIntensity: 'Moderate (RPE 6–7/10)',
+    restInterval: '60 seconds between sets',
+    trainingBenefits:
+      'Eliminates bilateral limb strength asymmetries and prepares knees and hips for eccentric deceleration during sudden court stops.',
+    biomechanicalRationale:
+      'Replicates the unilateral weight transfer and forward ground reaction force absorption experienced when stepping into deep forehand drives.',
+    progressionNote: 'Phase 01 Foundational Image: Develops unilateral eccentric brake control and single-leg stability.'
+  },
+  {
+    id: 'p1-standard-push-ups',
+    name: 'Standard Push-Ups',
+    movementTarget: 'The Overhead Smash',
+    phase: 'preparation',
+    isMilestoneOriginal: false,
+    mediaPlaceholder: {
+      type: 'image',
+      filename: '/images/exercises/standard-push-ups.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) image showing full push-up lockout, 45-degree elbow path, chest lowering within 2 inches of mat, and rigid trunk.'
+    },
+    movementDescription:
+      'Closed-chain upper-body horizontal pressing movement building anterior shoulder strength, chest power, and scapulothoracic rhythm for overhead pickleball shots.',
+    stepByStepInstructions: [
+      'Begin in a high plank position with hands placed slightly wider than shoulder-width, fingers spread forward.',
+      'Maintain a rigid core and glute brace; lower chest smoothly until it is 1–2 inches from the floor, elbows flaring back at ~45°.',
+      'Keep neck neutral and prevent hips from sagging below torso level.',
+      'Press firmly through whole palms to return to full elbow lockout; repeat for 10–12 crisp repetitions.'
+    ],
+    equipmentNeeded: 'Exercise Mat',
+    primaryMuscles: ['Pectoralis Major (Sternal & Clavicular)', 'Anterior Deltoid', 'Triceps Brachii'],
+    secondaryMuscles: ['Serratus Anterior (scapular protraction)', 'Rectus Abdominis'],
+    setsAndReps: '3 sets × 10–12 reps',
+    trainingIntensity: 'Moderate (RPE 6–7/10)',
+    restInterval: '45–60 seconds between sets',
+    trainingBenefits:
+      'Reinforces anterior upper-body pushing power, protects the shoulder anterior capsule, and trains serratus anterior for scapular mobility.',
+    biomechanicalRationale:
+      'Conditions the horizontal adductors and triceps to withstand the high eccentric and concentric forces required during overhead smash propulsion.',
+    progressionNote: 'Phase 01 Foundational Image: Establishes upper-body pressing strength and scapular stabilizer control.'
   }
 ];
 
-// --- PHASE 03: COMPETITION EXERCISES (Maintenance, Neuromuscular Sharpness & Fatigue Management) ---
+// --- PHASE 02: PRE-COMPETITION EXERCISES (Original 6 Milestone 2 Video Demonstrations, 9:16 Portrait) ---
+export const PRE_COMPETITION_EXERCISES: ExerciseItem[] = [
+  ...MILESTONE_2_EXERCISES.map((ex) => ({
+    ...ex,
+    phase: 'pre-competition' as const,
+    isMilestoneOriginal: true,
+    progressionNote: 'Phase 02 Pre-Competition: Executed at high intent and sport-specific speed (70–80% HRmax) to convert foundational strength into explosive court power.'
+  }))
+];
+
+// --- PHASE 03: COMPETITION EXERCISES (Strictly 3 Images Only for Core Foundational Pickleball Movements, 9:16 Portrait) ---
 export const COMPETITION_EXERCISES: ExerciseItem[] = [
   {
-    id: 'comp-rotational-velocity-taper',
-    name: 'Speed-Optimized Rotational Shadow Drives',
-    originalName: 'Bodyweight Rotational Windmill Drive',
+    id: 'p3-forehand-drive',
+    name: 'Forehand Drive Maintenance & Kinetic Sequencing',
     movementTarget: 'Forehand Drive',
     phase: 'competition',
     isMilestoneOriginal: false,
     mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/competition-rotational-shadow-drives.mp4',
-      aspectRatio: '16:9',
-      description: 'Crisp, low-volume forehand shadow swings focusing on pure kinetic chain timing, perfect balance, and zero residual fatigue.'
+      type: 'image',
+      filename: '/images/exercises/forehand-drive-maintenance.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) image of athlete at contact point of the forehand drive with neutral wrist and lead-foot weight transfer.'
     },
     movementDescription:
-      'High-quality, low-volume rotational activation drill maintaining neuromuscular motor sequencing without causing peripheral muscle fatigue.',
+      'Sport-specific technical timing drill maintaining neuromuscular motor sequencing of the 3rd class lever stroke without inducing peripheral muscular fatigue.',
     stepByStepInstructions: [
-      'Take ready stance at the court baseline or open area with paddle in hand (or shadow grip).',
+      'Take athletic ready stance at the court baseline with paddle in hand (or shadow grip).',
       'Execute crisp, rhythmic forehand drives focusing on effortless kinetic sequencing: leg drive → hip turn → smooth follow-through.',
-      'Perform only 6–8 crisp repetitions per side at high technical precision.',
-      'Prioritize fluidity and elastic rebound over muscular strain.'
+      'Perform 6–8 pristine repetitions per side at high technical precision with complete focus on form.',
+      'Prioritize fluidity, elastic recoil, and clean balance over muscular straining.'
     ],
-    equipmentNeeded: 'Paddle (or bodyweight shadow)',
-    primaryMuscles: ['Core Obliques', 'Anterior Deltoids', 'Gluteus Medius'],
-    secondaryMuscles: ['Forearm flexors', 'Rectus Abdominis'],
+    equipmentNeeded: 'Pickleball Paddle',
+    primaryMuscles: ['Internal & External Obliques', 'Anterior Deltoids', 'Gluteus Medius'],
+    secondaryMuscles: ['Forearm Flexors', 'Rectus Abdominis'],
     setsAndReps: '2 sets × 6–8 reps per side (crisp & pristine)',
     trainingIntensity: 'Low-to-Moderate (RPE 5–6/10, 60–65% HRmax)',
     restInterval: '60 seconds between sets (full recovery)',
-    trainingBenefits: 'Keeps neural pathways primed for match play while preserving energy stores for tournament weekends.',
+    trainingBenefits:
+      'Keeps neural pathways primed for tournament play while completely preserving energy stores and joint health.',
     biomechanicalRationale:
-      'Maintains motor pattern fidelity and timing of the 3rd class lever system without inducing muscle damage or soreness.',
-    progressionNote: 'Volume reduced by 50% from preparation; intensity tuned for clean neural sharpness and zero post-session soreness.'
+      'Maintains motor pattern fidelity and timing of the 3rd class lever system without inducing muscle damage or soreness before tournament play.',
+    progressionNote: 'Phase 03 Movement Image: Tapered volume maintaining pristine motor pattern fidelity for competition.'
   },
   {
-    id: 'comp-smash-priming',
-    name: 'Trophy Position Timing & Controlled Overhead Deceleration',
-    originalName: 'Plyometric Overhead Bodyweight Slams',
+    id: 'p3-overhead-smash',
+    name: 'Overhead Smash Timing & Deceleration Posture',
     movementTarget: 'The Overhead Smash',
     phase: 'competition',
     isMilestoneOriginal: false,
     mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/competition-trophy-timing.mp4',
-      aspectRatio: '16:9',
-      description: 'Submaximal jump to trophy position, clean rhythmic overhead swing through contact plane, soft balanced landing.'
+      type: 'image',
+      filename: '/images/exercises/overhead-smash-maintenance.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) view of overhead smash apex contact and trophy position with balanced landing mechanics.'
     },
     movementDescription:
-      'Technical timing drill sharpening the overhead smash mechanics and soft-landing deceleration with minimal joint stress.',
+      'Refined technical timing drill sharpening the overhead smash kinetic whip and soft-landing deceleration with minimal joint stress.',
     stepByStepInstructions: [
       'Take a light backward tracking step and spring into a comfortable, submaximal vertical hop.',
-      'Align paddle overhead in optimal strike zone (160°–180° shoulder elevation).',
+      'Align paddle overhead in optimal strike zone (160°–180° shoulder elevation) in the classical trophy position.',
       'Execute a smooth, fluid overhead stroke snapping cleanly downward through the ball line.',
-      'Decelerate softly onto the lead foot with posture upright and balanced; 6 reps per set.'
+      'Decelerate softly onto the lead foot with posture upright and balanced; perform 6 controlled repetitions per set.'
     ],
-    equipmentNeeded: 'Pickleball paddle',
-    primaryMuscles: ['Latissimus Dorsi', 'Pectoralis Major', 'Rotator Cuff', 'Triceps'],
-    secondaryMuscles: ['Anterior Core', 'Calf complex'],
+    equipmentNeeded: 'Pickleball Paddle',
+    primaryMuscles: ['Latissimus Dorsi', 'Pectoralis Major', 'Rotator Cuff (Infraspinatus/Teres Minor)', 'Triceps Brachii'],
+    secondaryMuscles: ['Anterior Core', 'Calf Complex'],
     setsAndReps: '2 sets × 6 reps',
     trainingIntensity: 'Moderate technical intent (RPE 6/10)',
     restInterval: '60 seconds between sets',
-    trainingBenefits: 'Fine-tunes smash timing and overhead contact consistency without fatiguing shoulder rotators before tournament matches.',
+    trainingBenefits:
+      'Fine-tunes smash timing and overhead contact consistency without fatiguing shoulder rotators before tournament matches.',
     biomechanicalRationale:
-      'Re-establishes optimal scapulohumeral rhythm and reinforces lead-leg deceleration mechanics.',
-    progressionNote: 'Tapered from high-force jump slams to refined technical timing and eccentric landing stability.'
+      'Re-establishes optimal scapulohumeral rhythm and reinforces lead-leg eccentric deceleration mechanics.',
+    progressionNote: 'Phase 03 Movement Image: Focuses on precision trophy positioning and safe soft landing mechanics.'
   },
   {
-    id: 'comp-rotator-activation',
-    name: 'Scapular & Rotator Activation Flutters',
-    originalName: 'Prone Cobra Shoulder Retractions',
-    movementTarget: 'The Overhead Smash',
-    phase: 'competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/competition-rotator-activation.mp4',
-      aspectRatio: '16:9',
-      description: 'Standing or light prone band activation with micro-contractions to warm and protect the infraspinatus and teres minor.'
-    },
-    movementDescription:
-      'Non-fatiguing rotator cuff neural activation drill to ensure glenohumeral stability prior to court warm-up.',
-    stepByStepInstructions: [
-      'Position in prone or standing hinge with spine neutral and elbows at 90° or extended.',
-      'Retract scapulae lightly and rotate thumbs backward to activate external rotators.',
-      'Perform 10 gentle micro-flutters, hold for 2 seconds, and release smoothly.',
-      'Repeat for 6 controlled repetitions.'
-    ],
-    equipmentNeeded: 'Mat or light resistance mini-band (optional)',
-    primaryMuscles: ['Infraspinatus', 'Teres Minor', 'Rhomboids', 'Mid Trapezius'],
-    secondaryMuscles: ['Posterior Deltoid'],
-    setsAndReps: '2 sets × 6 reps with 2s hold',
-    trainingIntensity: 'Low / Activation focus (RPE 4–5/10)',
-    restInterval: '45 seconds',
-    trainingBenefits: 'Pre-activates the shoulder cuff to prevent impingement during tournament matches while inducing zero fatigue.',
-    biomechanicalRationale:
-      'Ensures centering of the humeral head in the glenoid fossa prior to high-speed match impacts.',
-    progressionNote: 'Gentle activation protocol strictly designed for joint lubrication and neural readiness.'
-  },
-  {
-    id: 'comp-split-step-priming',
-    name: 'Rapid Split-Step Priming Drop-Hops',
-    originalName: 'Low-Crouch Lateral Shuttle Shuffle',
+    id: 'p3-dink-split-step',
+    name: 'Dink Shot Precision & Split-Step Stance',
     movementTarget: 'Dink Shot & Split Step',
     phase: 'competition',
     isMilestoneOriginal: false,
     mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/competition-split-step-priming.mp4',
-      aspectRatio: '16:9',
-      description: 'Quick 15-second intervals of light rhythmic split-steps with instantaneous 2-step lateral bursts and instant recovery.'
+      type: 'image',
+      filename: '/images/exercises/dink-split-step-maintenance.jpg',
+      aspectRatio: '9:16',
+      description: 'Vertical portrait (9:16) action shot of low-crouch Kitchen line positioning, stable base of support, and locked wrist dink execution.'
     },
     movementDescription:
-      'Neuromuscular priming drill stimulating fast-twitch motor units in calves and quadriceps for immediate match readiness.',
+      'Targeted tournament-priming exercise focusing on rapid split-step synchronization, Kitchen line court stance, and soft paddle face control.',
     stepByStepInstructions: [
-      'Bounce lightly on balls of feet at the Kitchen line.',
-      'Drop synchronously into a crisp split-step landing wide with knees bent (~70°).',
-      'Instantly push 2 steps laterally, pause 1 count in balanced dink stance, and spring back to center.',
-      'Execute for short 15–20 second bursts at snappy speed with full recovery between sets.'
+      'Assume a light, rhythmic bounce on the balls of the feet at the Kitchen (non-volley zone) line.',
+      'Drop synchronously into a low-crouch split-step landing with wide base of support and ~70° knee flexion.',
+      'Execute a soft, shoulder-driven shadow dink push with an immovable neutral wrist and upright chest.',
+      'Hold the posture for 3 seconds, reset smoothly, and repeat for 6–8 crisp repetitions.'
     ],
-    equipmentNeeded: 'Court or flat surface',
-    primaryMuscles: ['Gastrocnemius', 'Soleus', 'Quadriceps', 'Gluteus Medius'],
-    secondaryMuscles: ['Peroneals', 'Core stabilizers'],
-    setsAndReps: '3 sets × 20 seconds (burst tempo)',
-    trainingIntensity: 'Snappy Speed / Low Volume (RPE 6.5/10)',
-    restInterval: '60 seconds full recovery',
-    trainingBenefits: 'Primes fast-twitch reflex arcs and reactive court footwork without depleting glycogen stores.',
+    equipmentNeeded: 'Pickleball Paddle',
+    primaryMuscles: ['Quadriceps', 'Gluteus Medius', 'Soleus & Gastrocnemius', 'Forearm Stabilizers'],
+    secondaryMuscles: ['Peroneals', 'Core Stabilizers'],
+    setsAndReps: '2–3 sets × 6–8 reps (with 3s hold)',
+    trainingIntensity: 'Moderate (RPE 6/10, snappy reactive tempo)',
+    restInterval: '60 seconds between sets',
+    trainingBenefits:
+      'Primes fast-twitch reflex arcs and reactive court footwork without depleting glycogen stores ahead of match day.',
     biomechanicalRationale:
-      'Maximizes stretch-reflex potentiation in the Achilles and patellar tendons for fast reaction off the mark.',
-    progressionNote: 'Shortened duration from 45s endurance grinds to 20s explosive neuromuscular primes.'
-  },
-  {
-    id: 'comp-isometric-crouch-refresh',
-    name: 'Brief Isometric Kitchen Stance Hold',
-    originalName: 'Isometric Squat Hold',
-    movementTarget: 'Dink Shot & Split Step',
-    phase: 'competition',
-    isMilestoneOriginal: false,
-    mediaPlaceholder: {
-      type: 'video',
-      filename: '/videos/exercises/competition-kitchen-stance-hold.mp4',
-      aspectRatio: '16:9',
-      description: 'Short 4-second low-crouch hold with paddle in ready position, simulating dink battle positioning without lactic accumulation.'
-    },
-    movementDescription:
-      'Tapered isometric hold to maintain quad motor unit firing patterns and court stance posture.',
-    stepByStepInstructions: [
-      'Lower into Kitchen low-crouch ready position with paddle extended forward.',
-      'Hold the posture solidly for exactly 4 seconds, maintaining relaxed breathing and upright chest.',
-      'Stand up smoothly, shake out legs for 5 seconds, and repeat for 4–5 short cycles.'
-    ],
-    equipmentNeeded: 'Paddle (optional)',
-    primaryMuscles: ['Quadriceps', 'Gluteal complex', 'Calves'],
-    secondaryMuscles: ['Core erectors'],
-    setsAndReps: '2 sets × 4 cycles (4 seconds hold per cycle)',
-    trainingIntensity: 'Low-Moderate (RPE 5/10)',
-    restInterval: '45 seconds',
-    trainingBenefits: 'Reinforces the neuromuscular feel of the Kitchen crouch without creating heavy leg fatigue.',
-    biomechanicalRationale:
-      'Maintains isometric rate coding of knee extensors without inducing metabolic fatigue before competition.',
-    progressionNote: 'Reduced from 8–10 continuous cycles to 4 short cycles, focusing on postural precision.'
+      'Maintains isometric rate coding of knee extensors and tendon stiffness for rapid Kitchen retrieval without inducing metabolic fatigue.',
+    progressionNote: 'Phase 03 Movement Image: Reinforces low center-of-gravity dink defense and instant split-step readiness.'
   }
 ];
 
@@ -433,9 +307,9 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        PREPARATION_EXERCISES[0], // Bodyweight Rotational Windmill Drive
-        PREPARATION_EXERCISES[1], // Bodyweight Lateral Lunge with Rotational Reach
-        PREPARATION_EXERCISES[5]  // Isometric Squat Hold
+        PREPARATION_EXERCISES[0], // Bodyweight Squat
+        PREPARATION_EXERCISES[1], // Forearm Plank
+        PREPARATION_EXERCISES[2]  // Walking Lunges
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -445,17 +319,17 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
           'Diaphragmatic box breathing to restore resting HR (1 min)'
         ]
       },
-      coachingNotes: 'Emphasize smooth weight transfer from back foot to lead foot. Do not muscle through with the arm alone; let the hips initiate the sweep.'
+      coachingNotes: 'Emphasize smooth, controlled eccentric descent. Maintain upright posture in squats and avoid pelvic sagging during planks.'
     },
     {
       dayName: 'Tuesday',
       shortDay: 'TUE',
-      title: 'Shoulder Integrity & Lateral Kitchen Base',
-      focus: 'Overhead Deceleration Decoupling & Dink Stance Stability',
+      title: 'Upper Pressing Integrity & Core Stability',
+      focus: 'Push-Up Scapular Control & Anti-Extension Cylinder',
       status: 'Training',
       intensity: 'Moderate',
       durationMinutes: 30,
-      shortDescription: 'Strengthening the posterior rotator cuff and building low center-of-gravity quad stamina.',
+      shortDescription: 'Strengthening the anterior shoulder girdle, serratus anterior, and pelvic-lumbar core cylinder.',
       warmupProtocol: {
         duration: '5 minutes',
         drills: [
@@ -465,35 +339,35 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        PREPARATION_EXERCISES[3], // Prone Cobra Shoulder Retractions
-        PREPARATION_EXERCISES[4], // Low-Crouch Lateral Shuttle Shuffle
-        PREPARATION_EXERCISES[5]  // Isometric Squat Hold
+        PREPARATION_EXERCISES[3], // Standard Push-Ups
+        PREPARATION_EXERCISES[1], // Forearm Plank
+        PREPARATION_EXERCISES[0]  // Bodyweight Squat
       ],
       cooldownProtocol: {
         duration: '5 minutes',
         drills: [
-          'Cross-body shoulder stretch for posterior capsule (2 mins)',
-          'Pigeon pose for gluteus medius and piriformis (2 mins)',
-          'Deep seated forward fold (1 min)'
+          'Doorway pectoralis and anterior deltoid stretch (2 mins)',
+          'Seated forward fold (2 mins)',
+          'Deep nasal diaphragmatic breathing (1 min)'
         ]
       },
-      coachingNotes: 'Ensure thumbs point firmly toward the ceiling in the Prone Cobra to engage the infraspinatus and teres minor, not just upper traps.'
+      coachingNotes: 'Maintain a 45-degree elbow path during push-ups to protect the glenohumeral joint and engage the serratus anterior.'
     },
     {
       dayName: 'Wednesday',
       shortDay: 'WED',
-      title: 'Active Recovery & Mobility Restoration',
+      title: 'Active Recovery & Core Mobility',
       focus: 'Joint Decompression & Soft Tissue Flush',
       status: 'Active Recovery',
       intensity: 'Low',
       durationMinutes: 25,
-      shortDescription: 'Gentle mobility flow, thoracic spine opening, and hydration to promote tissue repair.',
+      shortDescription: 'Gentle mobility flow, thoracic spine opening, and light isometric core bracing to promote tissue repair.',
       warmupProtocol: {
         duration: '3 minutes',
         drills: ['Gentle neck rolls and wrist circles', 'Cat-cow pelvic tilts', 'Ankle dorsiflexion rocks']
       },
       exercises: [
-        PREPARATION_EXERCISES[3] // Prone Cobra (performed lightly for postural reset)
+        PREPARATION_EXERCISES[1] // Forearm Plank (performed gently with focus on deep diaphragmatic breathing)
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -504,24 +378,24 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
     {
       dayName: 'Thursday',
       shortDay: 'THU',
-      title: 'Kitchen Agility & Aerobic Stamina',
-      focus: 'Sustained Dink Exchange Conditioning (65–70% HRmax)',
+      title: 'Lower-Body Stamina & Pressing Conditioning',
+      focus: 'Sustained Thigh Stamina & Unilateral Deceleration',
       status: 'Training',
       intensity: 'Moderate-High',
       durationMinutes: 30,
-      shortDescription: 'Prolonged low-crouch drills to increase fatigue threshold at the non-volley zone line.',
+      shortDescription: 'Unilateral walking lunges paired with bodyweight squats and push-ups to build court endurance.',
       warmupProtocol: {
         duration: '5 minutes',
         drills: [
           'Lateral band walks or wide side-steps (2 mins)',
           'Bodyweight squats with reach (1.5 mins)',
-          'Shadow split-step hops with quiet landings (1.5 mins)'
+          'Light stationary jogging with arm swings (1.5 mins)'
         ]
       },
       exercises: [
-        PREPARATION_EXERCISES[4], // Low-Crouch Lateral Shuttle Shuffle
-        PREPARATION_EXERCISES[1], // Bodyweight Lateral Lunge with Rotational Reach
-        PREPARATION_EXERCISES[5]  // Isometric Squat Hold
+        PREPARATION_EXERCISES[0], // Bodyweight Squat
+        PREPARATION_EXERCISES[2], // Walking Lunges
+        PREPARATION_EXERCISES[3]  // Standard Push-Ups
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -531,7 +405,7 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
           'Supine hamstring stretch (1 min)'
         ]
       },
-      coachingNotes: 'Keep the hips below shoulder height throughout the shuttle shuffle. Measure resting HR recovery at the end of session.'
+      coachingNotes: 'Keep knees tracking over toes during walking lunges to prevent valgus stress on knee ligaments.'
     },
     {
       dayName: 'Friday',
@@ -541,13 +415,13 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
       status: 'Active Recovery',
       intensity: 'Low',
       durationMinutes: 25,
-      shortDescription: 'Continuous light court movement and paddle coordination keeping heart rate in Zone 1-2.',
+      shortDescription: 'Continuous light court walking, shadow movement, and gentle core alignment keeping heart rate in Zone 1-2.',
       warmupProtocol: {
         duration: '5 minutes',
         drills: ['Light brisk walking/jogging', 'High knee hugs', 'Arm cross-body swings']
       },
       exercises: [
-        PREPARATION_EXERCISES[0] // Rotational Windmill Drive (performed at 50% tempo for coordination)
+        PREPARATION_EXERCISES[1] // Forearm Plank (short 20-second activation sets)
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -558,12 +432,12 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
     {
       dayName: 'Saturday',
       shortDay: 'SAT',
-      title: 'Full Kinetic Chain Integration Circuit',
-      focus: 'Full-Court Movement Sequencing & Submaximal Power',
+      title: 'Full Foundational Conditioning Circuit',
+      focus: 'Integration of all 4 Core Foundational Exercises',
       status: 'Training',
       intensity: 'Moderate-High',
       durationMinutes: 30,
-      shortDescription: 'Integrating all 3 primary movements: forehand drives, controlled overhead smashes, and net dinks.',
+      shortDescription: 'Full circuit integrating all 4 core foundational exercises: Squats, Planks, Walking Lunges, and Push-Ups.',
       warmupProtocol: {
         duration: '5 minutes',
         drills: [
@@ -572,10 +446,10 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        PREPARATION_EXERCISES[0], // Rotational Windmill
-        PREPARATION_EXERCISES[2], // Plyometric Overhead Bodyweight Slams (controlled mechanics)
-        PREPARATION_EXERCISES[3], // Prone Cobra Retractions
-        PREPARATION_EXERCISES[4]  // Low-Crouch Lateral Shuttle Shuffle
+        PREPARATION_EXERCISES[0], // Bodyweight Squat
+        PREPARATION_EXERCISES[1], // Forearm Plank
+        PREPARATION_EXERCISES[2], // Walking Lunges
+        PREPARATION_EXERCISES[3]  // Standard Push-Ups
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -584,7 +458,7 @@ export const PREPARATION_PHASE_DATA: MicrocyclePhase = {
           'Heart rate assessment (log recovery toward resting <73 bpm) (1.5 mins)'
         ]
       },
-      coachingNotes: 'Saturday serves as the weekly fitness checkpoint. Notice how the kinetic chain naturally uncoils from ground to paddle.'
+      coachingNotes: 'Saturday serves as the foundational fitness checkpoint. Notice the increased muscular endurance and stability across all 4 movements.'
     },
     {
       dayName: 'Sunday',
@@ -887,7 +761,7 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         drills: ['Gentle walking and arm swings', 'Deep diaphragmatic belly breathing']
       },
       exercises: [
-        COMPETITION_EXERCISES[2] // Scapular activation flutters (unloaded)
+        COMPETITION_EXERCISES[2] // Dink Shot Precision & Split-Step Stance (unloaded mobility)
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -913,9 +787,8 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        COMPETITION_EXERCISES[0], // Speed-Optimized Rotational Shadow Drives
-        COMPETITION_EXERCISES[3], // Rapid Split-Step Priming Drop-Hops
-        COMPETITION_EXERCISES[2]  // Scapular & Rotator Activation
+        COMPETITION_EXERCISES[0], // Forehand Drive Maintenance & Kinetic Sequencing
+        COMPETITION_EXERCISES[2]  // Dink Shot Precision & Split-Step Stance
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -937,9 +810,8 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         drills: ['Lateral side shuffles (2 mins)', 'Calf and ankle prep (1.5 mins)', 'Shadow soft dinks (1.5 mins)']
       },
       exercises: [
-        COMPETITION_EXERCISES[4], // Brief Isometric Kitchen Stance Hold
-        COMPETITION_EXERCISES[3], // Rapid Split-Step Priming Drop-Hops
-        COMPETITION_EXERCISES[0]  // Speed-Optimized Shadow Drives
+        COMPETITION_EXERCISES[2], // Dink Shot Precision & Split-Step Stance
+        COMPETITION_EXERCISES[0]  // Forehand Drive Maintenance & Kinetic Sequencing
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -950,8 +822,8 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
     {
       dayName: 'Thursday',
       shortDay: 'THU',
-      title: 'Power Maintenance & Rotator Cuff Protection',
-      focus: 'Submaximal Overhead Timing & Shoulder Lubrication',
+      title: 'Power Maintenance & Overhead Timing',
+      focus: 'Submaximal Overhead Timing & Deceleration Control',
       status: 'Training',
       intensity: 'Moderate',
       durationMinutes: 20,
@@ -965,8 +837,8 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        COMPETITION_EXERCISES[1], // Trophy Position Timing & Controlled Deceleration
-        COMPETITION_EXERCISES[2]  // Scapular & Rotator Activation Flutters
+        COMPETITION_EXERCISES[1], // Overhead Smash Timing & Deceleration Posture
+        COMPETITION_EXERCISES[2]  // Dink Shot Precision & Split-Step Stance
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -988,7 +860,7 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         drills: ['Brisk court walking and dynamic arm swings (3 mins)', 'Light split-step hops (2 mins)']
       },
       exercises: [
-        COMPETITION_EXERCISES[3] // Rapid Split-Step Priming Drop-Hops (2 quick sets of 15 seconds)
+        COMPETITION_EXERCISES[2] // Dink Shot Precision & Split-Step Stance
       ],
       cooldownProtocol: {
         duration: '5 minutes',
@@ -1015,9 +887,9 @@ export const COMPETITION_PHASE_DATA: MicrocyclePhase = {
         ]
       },
       exercises: [
-        COMPETITION_EXERCISES[0],
-        COMPETITION_EXERCISES[1],
-        COMPETITION_EXERCISES[3]
+        COMPETITION_EXERCISES[0], // Forehand Drive Maintenance & Kinetic Sequencing
+        COMPETITION_EXERCISES[1], // Overhead Smash Timing & Deceleration Posture
+        COMPETITION_EXERCISES[2]  // Dink Shot Precision & Split-Step Stance
       ],
       cooldownProtocol: {
         duration: '10 minutes',

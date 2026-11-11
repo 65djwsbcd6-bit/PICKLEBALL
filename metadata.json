@@ -2,5 +2,7 @@
   "name": "Pickleball Microcycle Training Program",
   "description": "Comprehensive athletic performance and sports science microcycle training program for pickleball by Alexies Jean Ballesteros (H2101, MO-PE014 PE4).",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -54,10 +54,10 @@ export const ProgramComparisonPage: React.FC<ProgramComparisonPageProps> = ({
       dimension: 'general'
     },
     {
-      category: 'Exercise Characteristics',
-      prep: 'Controlled tempo, multi-planar bodyweight exercises, isometric holds, high rep ranges (12–15 reps / 35–45s).',
-      preComp: 'Maximal movement velocity, plyometric bounds, vertical jump smashes, unpredictable reactive cues (<0.4s response).',
-      comp: 'Low volume, speed-optimized shadow drives, submaximal priming drop-hops, non-fatiguing shoulder activations.',
+      category: 'Exercise Characteristics & Media Format',
+      prep: '4 Core Foundational Exercises (Bodyweight Squat, Forearm Plank, Walking Lunges, Standard Push-Ups) with static 9:16 form images, establishing tissue tolerance (12–15 reps / 35–45s).',
+      preComp: 'The 6 Milestone 2 exercise video demonstrations (Rotational Windmill, Lateral Lunge, Overhead Slams, Prone Cobra, Shuttle Shuffle, Isometric Squat) in 9:16 portrait video at sport-specific intensity (70–80% HRmax).',
+      comp: 'Strictly 3 static 9:16 images for core pickleball movements (Forehand Drive, Overhead Smash, Dink Shot & Split Step) for pristine motor pattern fidelity without fatigue.',
       dimension: 'volume'
     },
     {

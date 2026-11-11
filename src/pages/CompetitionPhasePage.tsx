@@ -58,23 +58,27 @@ export const CompetitionPhasePage: React.FC<CompetitionPhasePageProps> = ({
             </div>
           </div>
 
-          <div>
-            <h1 className="text-3xl sm:text-5xl font-extrabold text-[#123B65] tracking-tight">
-              {phase.title}: {phase.headline}
-            </h1>
-            <p className="text-sm sm:text-base text-[#475569] mt-3 max-w-3xl leading-relaxed">
-              {phase.mainFunction}
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+            <div className="lg:col-span-8">
+              <h1 className="text-3xl sm:text-5xl font-extrabold text-[#123B65] tracking-tight">
+                {phase.title}: {phase.headline}
+              </h1>
+              <p className="text-sm sm:text-base text-[#475569] mt-3 max-w-3xl leading-relaxed">
+                {phase.mainFunction}
+              </p>
+            </div>
 
-          {/* Banner Placeholder */}
-          <div className="pt-2">
-            <MediaPlaceholder
-              type="image"
-              filename={phase.bannerPlaceholder.filename}
-              aspectRatio="21:9"
-              description={phase.bannerPlaceholder.description}
-            />
+            {/* Banner Placeholder (9:16 Vertical Portrait) */}
+            <div className="lg:col-span-4 flex justify-center lg:justify-end">
+              <div className="w-full max-w-[260px] sm:max-w-[280px]">
+                <MediaPlaceholder
+                  type="image"
+                  filename={phase.bannerPlaceholder.filename}
+                  aspectRatio="9:16"
+                  description={phase.bannerPlaceholder.description}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

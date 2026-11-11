@@ -83,7 +83,7 @@ export const ExerciseCard: React.FC<ExerciseCardProps> = ({
           type={exercise.mediaPlaceholder.type}
           filename={exercise.mediaPlaceholder.filename}
           description={exercise.mediaPlaceholder.description}
-          aspectRatio="16:9"
+          aspectRatio={(exercise.mediaPlaceholder.aspectRatio as any) || '9:16'}
           originalLink={exercise.mediaPlaceholder.originalMilestoneLink}
         />
       </div>
